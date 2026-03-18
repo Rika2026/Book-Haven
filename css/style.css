@@ -1,0 +1,383 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #3F5461;
+  color: #131C26;
+  font-family: Calibri, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.page-shell {
+  width: 1000px;
+  margin: 18px auto;
+  background-color: #f2f2f2;
+  border: 2px solid #131C26;
+}
+
+/* Header */
+.site-header {
+  background-color: #2E2E4E;
+  color: #ffffff;
+  padding: 0;
+}
+
+.home-header-color {
+  background-color: #2E2E4E;
+}
+
+.header-top {
+  overflow: hidden;
+  padding: 14px 18px;
+}
+
+.logo-area {
+  float: left;
+  border: 2px solid #3F5461;
+  background-color: #f2f2f2;
+  text-align: center;
+}
+
+.large-logo-area {
+  width: 140px;
+  height: 72px;
+}
+
+.site-logo {
+  display: block;
+  margin: 0 auto;
+}
+
+.large-logo {
+  max-width: 88px;
+  max-height: 56px;
+  margin-top: 8px;
+}
+
+.header-title-nav {
+  float: right;
+  text-align: center;
+  width: 760px;
+}
+
+.top-site-title {
+  margin: 0 0 14px 0;
+  font-family: Arial, sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+/* Navigation */
+.main-nav {
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav a {
+  display: inline-block;
+  margin: 0 16px;
+  text-decoration: none;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.main-nav a:hover,
+.main-nav a:focus,
+.main-nav a.active {
+  color: #3E5641;
+}
+
+/* Main shared */
+.home-main,
+.gallery-main,
+.about-main,
+.events-main {
+  background-color: #f2f2f2;
+  padding: 18px;
+}
+
+/* Typography */
+h1 {
+  font-family: Arial, sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  color: #131C26;
+}
+
+h2,
+.page-section-title {
+  font-family: Arial, sans-serif;
+  font-size: 25px;
+  font-weight: bold;
+  color: #131C26;
+  margin-top: 0;
+  margin-bottom: 14px;
+}
+
+h3 {
+  font-family: Calibri, Arial, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: #131C26;
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+.subtitle-text {
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+  font-weight: normal;
+  color: #131C26;
+}
+
+p,
+label,
+input,
+textarea,
+button {
+  font-family: Calibri, Arial, sans-serif;
+  font-size: 16px;
+  color: #131C26;
+}
+
+/* Home page */
+.welcome-panel {
+  margin-bottom: 18px;
+}
+
+.welcome-panel h2 {
+  margin-bottom: 10px;
+}
+
+.home-intro {
+  margin-top: 0;
+  margin-bottom: 18px;
+}
+
+.welcome-message-box {
+  border: 1px solid #999999;
+  background-color: #f2f2f2;
+  height: 130px;
+  text-align: center;
+  padding: 0 30px;
+}
+
+.welcome-message-box p {
+  margin-top: 52px;
+}
+
+.home-feature-row {
+  overflow: hidden;
+}
+
+.feature-box {
+  float: left;
+  width: 30.6%;
+  margin-right: 2%;
+  border: 1px solid #999999;
+  background-color: #f2f2f2;
+  text-align: center;
+  height: 60px;
+  padding-top: 18px;
+}
+
+.feature-box:last-child {
+  margin-right: 0;
+}
+
+/* Gallery page */
+.gallery-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 12px;
+}
+
+.product-card {
+  width: 33%;
+  border: 1px solid #3F5461;
+  background-color: #f2f2f2;
+  text-align: center;
+  vertical-align: top;
+  padding: 10px;
+}
+
+.product-image {
+  width: 120px;
+  height: auto;
+  display: block;
+  margin: 0 auto 12px auto;
+}
+
+.product-title {
+  margin: 0 0 6px 0;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.product-description {
+  margin: 0 0 12px 0;
+}
+
+button {
+  background-color: #3E5641;
+  color: #ffffff;
+  border: 1px solid #131C26;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #742C36;
+}
+
+/* About page */
+.revised-about-main {
+  overflow: hidden;
+  min-height: 430px;
+}
+
+.updated-about-left {
+  float: left;
+  width: 31%;
+}
+
+.about-divider {
+  float: left;
+  width: 2%;
+  min-height: 350px;
+  border-left: 1px dashed #3F5461;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+.updated-about-right {
+  float: left;
+  width: 59%;
+}
+
+.full-contact-form {
+  margin-top: 12px;
+}
+
+.form-line {
+  margin-bottom: 14px;
+}
+
+.form-line label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-line input {
+  width: 170px;
+  border: 1px solid #3F5461;
+  background-color: #ffffff;
+  padding: 5px;
+}
+
+.form-line-textarea textarea {
+  width: 250px;
+  border: 1px solid #3F5461;
+  background-color: #ffffff;
+  padding: 6px;
+  resize: none;
+}
+
+.submit-row {
+  margin-top: 10px;
+}
+
+.justified-copy {
+  text-align: justify;
+  max-width: 430px;
+}
+
+.hours-section p,
+.about-section p {
+  margin-bottom: 10px;
+}
+
+/* Events page */
+.revised-events-main {
+  min-height: 420px;
+}
+
+.info-section {
+  margin-bottom: 24px;
+}
+
+.events-list-section {
+  margin-bottom: 26px;
+}
+
+.event-box-row {
+  overflow: hidden;
+}
+
+.detailed-event-box {
+  float: left;
+  width: 20.5%;
+  margin-right: 3.2%;
+  border: 1px solid #3F5461;
+  background-color: #f2f2f2;
+  text-align: center;
+  min-height: 110px;
+  padding-top: 12px;
+}
+
+.detailed-event-box:last-child {
+  margin-right: 0;
+}
+
+.event-name,
+.club-name {
+  font-weight: bold;
+  margin: 0 0 8px 0;
+}
+
+.event-time,
+.club-time {
+  margin: 0 0 6px 0;
+}
+
+.club-row {
+  overflow: hidden;
+}
+
+.detailed-club-box {
+  float: left;
+  width: 29.3%;
+  margin-right: 3%;
+  border: 1px solid #3F5461;
+  background-color: #f2f2f2;
+  text-align: center;
+  min-height: 90px;
+  padding-top: 14px;
+}
+
+.detailed-club-box:last-child {
+  margin-right: 0;
+}
+
+/* Footer */
+.site-footer {
+  text-align: center;
+  padding: 18px 10px;
+  background-color: #3E5641;
+}
+
+.home-footer-color {
+  background-color: #3E5641;
+}
+
+.site-footer p {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+  font-weight: bold;
+  color: #ffffff;
+}
