@@ -1,8 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-  /* =========================
-     SUBSCRIBE BUTTON
-  ========================= */
+  //subscribe button section
   const subscribeBtn = document.getElementById("subscribeBtn");
   if (subscribeBtn) {
     subscribeBtn.addEventListener("click", function () {
@@ -11,9 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
 
-  /* =========================
-     GALLERY PAGE - CART
-  ========================= */
+  //gallery page cart section
 
   const addToCartButtons = document.querySelectorAll(".addToCartBtn");
   const viewCartBtn = document.getElementById("viewCartBtn");
@@ -23,17 +19,17 @@ document.addEventListener("DOMContentLoaded", function () {
   const cartModal = document.getElementById("cartModal");
   const cartItems = document.getElementById("cartItems");
 
-  // Get cart from sessionStorage
+  // Gets cart info from sessionStorage
   function getCart() {
     return JSON.parse(sessionStorage.getItem("cart")) || [];
   }
 
-  // Save cart to sessionStorage
+  // Saves cart to sessionStorage
   function saveCart(cart) {
     sessionStorage.setItem("cart", JSON.stringify(cart));
   }
 
-  // Add item to cart
+  // Adds items to cart
   function addToCart(itemName) {
     let cart = getCart();
     cart.push(itemName);
@@ -41,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
     alert(itemName + " added to cart!");
   }
 
-  // Display cart items in modal
+  // Display cart items in modal view
   function displayCart() {
     if (!cartItems) return;
 
@@ -96,14 +92,14 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // Close Cart Modal
+  // Close Cart Modal view
   if (closeCartBtn) {
     closeCartBtn.addEventListener("click", function () {
       cartModal.style.display = "none";
     });
   }
 
-  // Close modal if clicking outside
+  // Close modal view if clicking outside
   if (cartModal) {
     window.addEventListener("click", function (event) {
       if (event.target === cartModal) {
@@ -113,15 +109,13 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
 
-  /* =========================
-     ABOUT PAGE - FORM
-  ========================= */
+  //about us page form section
 
   const contactForm = document.getElementById("contactForm");
   const submitBtn = document.getElementById("submitBtn");
   const clearFormBtn = document.getElementById("clearFormBtn");
 
-  // Submit form
+  // Submit form on about us page
   if (submitBtn) {
     submitBtn.addEventListener("click", function () {
 
@@ -131,13 +125,13 @@ document.addEventListener("DOMContentLoaded", function () {
       const feedback = document.getElementById("feedback").value.trim();
       const customOrder = document.getElementById("customOrder").checked;
 
-      // Validation
+      // Validation to make sure info is entered
       if (name === "" || email === "" || phone === "" || feedback === "") {
         alert("Please fill out all fields.");
         return;
       }
 
-      // Save to localStorage
+      // Saves info to localStorage
       const contactData = {
         name: name,
         email: email,
@@ -163,7 +157,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // Load saved data (optional but good for assignment)
+  // Loads saved data
   if (contactForm) {
     const savedData = JSON.parse(localStorage.getItem("contactFormData"));
 
