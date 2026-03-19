@@ -131,6 +131,7 @@ button {
   padding: 8px 14px;
   cursor: pointer;
   font-weight: bold;
+  border-radius: 3px;
 }
 
 button:hover {
@@ -176,12 +177,12 @@ button:hover {
 /* ---------------- HOME ---------------- */
 
 .enhanced-welcome-panel h2 {
-  text-align: center; 
+  text-align: center;
   font-size: 34px;
 }
 
 .home-intro {
-  text-align: center;    
+  text-align: center;
   font-size: 17px;
 }
 
@@ -204,6 +205,10 @@ button:hover {
   padding: 18px;
   border: 1px solid #131C26;
   height: 140px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .deal-box:last-child {
@@ -214,12 +219,7 @@ button:hover {
 .deal-box p {
   color: #ffffff;
 }
-.deal-box {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* vertical center */
-}
+
 .home-image-row {
   overflow: hidden;
   margin: 20px 0 24px 0;
@@ -265,7 +265,7 @@ button:hover {
 }
 
 .feature-box h3,
-.feature-box p{
+.feature-box p {
   color: #ffffff;
 }
 
@@ -305,6 +305,24 @@ button:hover {
   box-sizing: border-box;
 }
 
+.contact-form textarea {
+  resize: vertical;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 12px 0 15px 0;
+  font-weight: bold;
+}
+
+.checkbox-label input[type="checkbox"] {
+  width: auto;
+  max-width: none;
+  margin: 0;
+}
+
 .form-button-row {
   margin-top: 16px;
 }
@@ -342,6 +360,7 @@ button:hover {
 .gallery-button-group {
   float: right;
 }
+
 .gallery-button-group button {
   margin-left: 10px;
 }
@@ -398,6 +417,60 @@ button:hover {
 
 .product-description {
   margin: 0 0 14px 0;
+}
+
+/* Cart Modal */
+.cart-modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(19, 28, 38, 0.55);
+}
+
+.cart-modal-content {
+  background-color: #ffffff;
+  width: 65%;
+  max-width: 760px;
+  min-height: 220px;
+  margin: 8% auto;
+  padding: 28px 30px;
+  border: 2px solid #131C26;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.close-cart {
+  position: absolute;
+  top: 10px;
+  right: 16px;
+  font-size: 28px;
+  font-weight: bold;
+  color: #3F5461;
+  cursor: pointer;
+}
+
+.close-cart:hover {
+  color: #742C36;
+}
+
+#cartItems {
+  margin-top: 18px;
+  margin-bottom: 22px;
+  padding-left: 22px;
+}
+
+#cartItems li {
+  margin-bottom: 6px;
+}
+
+.cart-modal-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 
 /* ---------------- EVENTS ---------------- */
@@ -532,6 +605,33 @@ button:hover {
 
   .spotlight-card {
     width: 100%;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .spotlight-text {
+    text-align: center;
+  }
+
+  .gallery-top-row h2,
+  .gallery-button-group {
+    float: none;
+  }
+
+  .gallery-button-group {
+    margin-top: 12px;
+  }
+
+  .gallery-button-group button {
+    margin-left: 0;
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+
+  .cart-modal-content {
+    width: 90%;
+    margin: 15% auto;
+    padding: 22px 20px;
   }
 }
 
@@ -553,5 +653,21 @@ button:hover {
 
   .main-nav a {
     margin: 0 8px;
+  }
+
+  .cart-modal-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .cart-modal-buttons button {
+    width: 100%;
+  }
+
+  .form-button-row button {
+    display: block;
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 10px;
   }
 }
