@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Book Haven Bookstore | About</title>
+  <title>Book Haven Bookstore | Home</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -19,73 +19,74 @@
         <div class="header-title-nav">
           <h1 class="top-site-title">Book Haven Bookstore</h1>
           <nav class="main-nav">
-            <a href="index.html">Home</a>
+            <a href="index.html" class="active">Home</a>
             <a href="gallery.html">Gallery</a>
-            <a href="about.html" class="active">About</a>
+            <a href="about.html">About</a>
             <a href="events.html">Events</a>
           </nav>
         </div>
       </div>
     </header>
 
-    <main class="about-main full-width-main">
-      <div class="about-layout-wide">
-        <section class="about-contact-panel">
-          <h2>Contact Us</h2>
+    <main class="home-main enhanced-home-main full-width-main">
+      <section class="welcome-panel enhanced-welcome-panel">
+        <h2>Welcome to Book Haven</h2>
+        <p class="home-intro">
+          Your cozy destination for books, magazines, and reading accessories.<br> 
+          Discover stories, connect with your fellow readers, and find your next favorite book or accessory at Book Haven Bookstore.
+        </p>
+      </section>
 
-          <form class="contact-form">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" placeholder="Enter your full name">
-
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="Enter your email address">
-
-            <label for="phone">Phone:</label>
-            <input type="text" id="phone" name="phone" placeholder="Enter your phone number">
-
-            <label for="request">Custom Order / Feedback:</label>
-            <textarea id="request" name="request" rows="6" placeholder="Enter your custom order request or feedback here"></textarea>
-
-            <div class="form-button-row">
-              <button type="submit">Submit</button>
-              <button type="reset" class="secondary-button">Clear Form</button>
-            </div>
-          </form>
-        </section>
-
-        <section class="about-info-panel">
-          <h2>About Us</h2>
-          <p class="justified-copy">
-            Book Haven Bookstore is a local treasure for book enthusiasts, offering a diverse
-            selection of books, magazines, journals, and reading-inspired accessories. With
-            a deep-rooted commitment to fostering literary exploration and a love for reading,
-            Book Haven creates a welcoming space where customers can browse, connect, and
-            discover new favorites.
-          </p>
-          <p class="justified-copy">
-            Our mission is to support lifelong learning, celebrate imagination, and provide a
-            warm, inviting environment for readers of all ages. Whether you are searching for
-            a gift, your next favorite story, or a community event, Book Haven Bookstore
-            brings readers together through the power of books.
-          </p>
-
-          <h2>Hours of Operation</h2>
-          <div class="hours-table">
-            <div class="hours-row">
-              <span>Monday - Friday</span>
-              <span>9:00 AM - 8:00 PM</span>
-            </div>
-            <div class="hours-row">
-              <span>Saturday</span>
-              <span>10:00 AM - 6:00 PM</span>
-            </div>
-            <div class="hours-row">
-              <span>Sunday</span>
-              <span>11:00 AM - 5:00 PM</span>
-            </div>
+      <section class="deals-panel">
+        <h2>Deals &amp; Coupons</h2>
+        <div class="deals-box-row">
+          <div class="deal-box">
+            <h3>Today’s Special</h3>
+            <p>Get 15% off one featured title this week while supplies last.</p>
           </div>
-        </section>
-      </div>
+
+          <div class="deal-box">
+            <h3>BOGO</h3>
+            <p>Buy any magazine and get the second one half off!</p>
+          </div>
+
+          <div class="deal-box">
+            <h3>Weekend Treat</h3>
+            <p>Get your very own Book Haven bookmark with any purchase of two or more books.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="home-image-row">
+        <div class="home-image-box">
+          <img src="images/foundry-library-869061.jpg" alt="Cozy library interior" class="home-feature-image">
+        </div>
+
+        <div class="home-image-box">
+          <img src="images/thaoantran0101-books-7744938.jpg" alt="Large modern bookstore interior" class="home-feature-image">
+        </div>
+      </section>
+
+      <section class="shop-category-section">
+        <h2 class="shop-category-title">Shop by Category</h2>
+
+        <div class="feature-row home-feature-row">
+          <div class="feature-box">
+            <h3>Featured Books</h3>
+            <p>Check out our features books here.</p>
+          </div>
+
+          <div class="feature-box">
+            <h3>Magazines</h3>
+            <p>Check out our magazines here.</p>
+          </div>
+
+          <div class="feature-box">
+            <h3>Accessories</h3>
+            <p>Check out our accessories like our tote bag here.</p>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer class="site-footer home-footer-color expanded-footer">
