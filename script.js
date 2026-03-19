@@ -1,4 +1,3 @@
-alert("JS loaded");
 // Subscribe button alert
 const subscribeBtn = document.getElementById("subscribeBtn");
 if (subscribeBtn) {
@@ -12,7 +11,7 @@ const addToCartButtons = document.querySelectorAll(".addToCartBtn");
 if (addToCartButtons.length > 0) {
   addToCartButtons.forEach(function (button) {
     button.addEventListener("click", function () {
-      alert("Item added to the cart.");
+      alert("Item added to cart.");
     });
   });
 }
@@ -38,6 +37,6 @@ const submitBtn = document.getElementById("submitBtn");
 if (submitBtn) {
   submitBtn.addEventListener("click", function (event) {
     event.preventDefault();
-    alert("Thank you for your message.");
+    alert("Thank you for contacting us.");
   });
 } 
