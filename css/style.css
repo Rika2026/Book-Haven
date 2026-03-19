@@ -339,6 +339,13 @@ button:hover {
 
 /* ---------------- GALLERY ---------------- */
 
+.gallery-button-group {
+  float: right;
+}
+.gallery-button-group button {
+  margin-left: 10px;
+}
+
 .gallery-top-row {
   overflow: hidden;
   margin-bottom: 22px;
