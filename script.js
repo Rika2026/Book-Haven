@@ -40,12 +40,4 @@ if (submitBtn) {
     event.preventDefault();
     alert("Thank you for your message.");
   });
-}
-
-
-Marika Stewart 
-Assoc. Operation Analyst
-Triumph Insulation Systems 
-Mstewart@triumphgroup.com
-828.503.5124
- 
+} 
