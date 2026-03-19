@@ -65,7 +65,7 @@ footer {
   color: #ffffff;
 }
 
-/* Nav */
+/* Navigation */
 .main-nav a {
   display: inline-block;
   margin: 0 18px;
@@ -82,7 +82,7 @@ footer {
   color: #742C36;
 }
 
-/* Main shared */
+/* Main shared areas */
 main {
   padding: 26px;
   background-color: #f2f2f2;
@@ -174,7 +174,7 @@ button:hover {
   color: #ffffff;
 }
 
-/* ---------------- HOME ---------------- */
+/* ---------------- HOME PAGE ---------------- */
 
 .enhanced-welcome-panel h2 {
   text-align: center;
@@ -269,7 +269,7 @@ button:hover {
   color: #ffffff;
 }
 
-/* ---------------- ABOUT ---------------- */
+/* ---------------- ABOUT US PAGE---------------- */
 
 .about-layout-wide {
   overflow: hidden;
@@ -355,7 +355,7 @@ button:hover {
   float: right;
 }
 
-/* ---------------- GALLERY ---------------- */
+/* ---------------- GALLERY PAGE ---------------- */
 
 .gallery-button-group {
   float: right;
@@ -419,7 +419,7 @@ button:hover {
   margin: 0 0 14px 0;
 }
 
-/* Cart Modal */
+/* Cart Modal View */
 .cart-modal {
   display: none;
   position: fixed;
@@ -473,7 +473,7 @@ button:hover {
   flex-wrap: wrap;
 }
 
-/* ---------------- EVENTS ---------------- */
+/* ---------------- EVENTS PAGE ---------------- */
 
 .spotlight-section {
   text-align: center;
@@ -572,7 +572,7 @@ button:hover {
   margin: 0 0 6px 0;
 }
 
-/* ---------------- RESPONSIVE ---------------- */
+/* ---------------- Action and Response ---------------- */
 
 @media (max-width: 768px) {
   .header-title-nav {
