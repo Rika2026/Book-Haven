@@ -35,8 +35,7 @@ if (processOrderBtn) {
 // About page Submit alert
 const submitBtn = document.getElementById("submitBtn");
 if (submitBtn) {
-  submitBtn.addEventListener("click", function (event) {
-    event.preventDefault();
+  submitBtn.addEventListener("click", function () {
     alert("Thank you for contacting us.");
   });
 } 
