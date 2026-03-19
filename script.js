@@ -1,3 +1,4 @@
+alert("JS loaded");
 // Subscribe button alert
 const subscribeBtn = document.getElementById("subscribeBtn");
 if (subscribeBtn) {
