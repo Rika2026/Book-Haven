@@ -8,12 +8,12 @@
 </head>
 <body>
 
-  <div class="page-shell">
+  <div class="page-shell full-page-shell">
 
     <header class="site-header home-header-color">
       <div class="header-top">
-        <div class="logo-area large-logo-area">
-          <img src="images/Client3_LogoPalette2_742C36.png" alt="Book Haven Bookstore logo" class="site-logo large-logo">
+        <div class="logo-area extra-large-logo-area">
+          <img src="images/Client3_LogoPalette2_742C36.png" alt="Book Haven Bookstore logo" class="site-logo extra-large-logo">
         </div>
 
         <div class="header-title-nav">
@@ -28,61 +28,73 @@
       </div>
     </header>
 
-    <main class="about-main revised-about-main">
-      <div class="about-left updated-about-left">
-        <h2 class="page-section-title">Contact Us</h2>
+    <main class="about-main full-width-main">
+      <div class="about-layout-wide">
+        <section class="about-contact-panel">
+          <h2>Contact Us</h2>
 
-        <form class="contact-form full-contact-form">
-          <div class="form-line">
+          <form class="contact-form">
             <label for="name">Name:</label>
-            <input type="text" id="name" name="name">
-          </div>
+            <input type="text" id="name" name="name" placeholder="Enter your full name">
 
-          <div class="form-line">
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email">
-          </div>
+            <input type="email" id="email" name="email" placeholder="Enter your email address">
 
-          <div class="form-line">
             <label for="phone">Phone:</label>
-            <input type="text" id="phone" name="phone">
-          </div>
+            <input type="text" id="phone" name="phone" placeholder="Enter your phone number">
 
-          <div class="form-line form-line-textarea">
             <label for="request">Custom Order / Feedback:</label>
-            <textarea id="request" name="request" rows="5"></textarea>
-          </div>
+            <textarea id="request" name="request" rows="6" placeholder="Enter your custom order request or feedback here"></textarea>
 
-          <div class="submit-row">
-            <button type="submit">Submit</button>
-          </div>
-        </form>
-      </div>
-
-      <div class="about-divider"></div>
-
-      <div class="about-right updated-about-right">
-        <section class="about-section">
-          <h2 class="page-section-title">About Us</h2>
-          <p class="about-copy justified-copy">
-            Book Haven Bookstore is a local treasure for book enthusiasts, offering a diverse selection of books, magazines, journals, and office supplies. 
-            With a deep-rooted commitment to fostering literary exploration and a love for reading, it is embarking on the creation of an online presence that mirrors its dedication to the world of words. 
-            Serving a broad audience of book lovers and knowledge seekers, its central goal is to amplify its visibility, cultivate a vibrant literary community, and simplify the process of book inquiries and purchases. 
-            Its target audience comprises avid readers, students, and individuals in search of high-quality reading materials and office essentials. 
-            Book Haven Bookstore’s website theme revolves around celebrating the written word, creating an inviting digital space that encourages literary discovery, and supporting intellectual growth.
-          </p>
+            <div class="form-button-row">
+              <button type="submit">Submit</button>
+              <button type="reset" class="secondary-button">Clear Form</button>
+            </div>
+          </form>
         </section>
 
-        <section class="hours-section">
-          <h2 class="page-section-title">Hours of Operations</h2>
-          <p>Monday - Friday: 9:00 AM - 8:00 PM</p>
-          <p>Saturday: 10:00 AM - 6:00 PM</p>
-          <p>Sunday: 11:00 AM - 5:00 PM</p>
+        <section class="about-info-panel">
+          <h2>About Us</h2>
+          <p class="justified-copy">
+            Book Haven Bookstore is a local treasure for book enthusiasts, offering a diverse
+            selection of books, magazines, journals, and reading-inspired accessories. With
+            a deep-rooted commitment to fostering literary exploration and a love for reading,
+            Book Haven creates a welcoming space where customers can browse, connect, and
+            discover new favorites.
+          </p>
+          <p class="justified-copy">
+            Our mission is to support lifelong learning, celebrate imagination, and provide a
+            warm, inviting environment for readers of all ages. Whether you are searching for
+            a gift, your next favorite story, or a community event, Book Haven Bookstore
+            brings readers together through the power of books.
+          </p>
+
+          <h2>Hours of Operation</h2>
+          <div class="hours-table">
+            <div class="hours-row">
+              <span>Monday - Friday</span>
+              <span>9:00 AM - 8:00 PM</span>
+            </div>
+            <div class="hours-row">
+              <span>Saturday</span>
+              <span>10:00 AM - 6:00 PM</span>
+            </div>
+            <div class="hours-row">
+              <span>Sunday</span>
+              <span>11:00 AM - 5:00 PM</span>
+            </div>
+          </div>
         </section>
       </div>
     </main>
 
-    <footer class="site-footer home-footer-color">
+    <footer class="site-footer home-footer-color expanded-footer">
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="about.html">About Us</a>
+        <a href="events.html">Community</a>
+      </div>
       <p>&copy; 2026 Book Haven Bookstore</p>
     </footer>
 
