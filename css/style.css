@@ -494,7 +494,7 @@ button:hover {
 
 /* ---------------- RESPONSIVE ---------------- */
 
-@media (max-width: 1100px) {
+@media (max-width: 768px) {
   .header-title-nav {
     width: calc(100% - 230px);
   }
@@ -528,7 +528,7 @@ button:hover {
   }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 600px) {
   .header-top {
     padding: 16px;
   }
