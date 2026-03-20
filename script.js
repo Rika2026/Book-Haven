@@ -1,27 +1,29 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-  //subscribe button section
+  /* =========================
+     SUBSCRIBE BUTTON SECTION
+  ========================= */
   const subscribeForm = document.getElementById("subscribeForm");
 
-if (subscribeForm) {
-  subscribeForm.addEventListener("submit", function (event) {
-    event.preventDefault();
+  if (subscribeForm) {
+    subscribeForm.addEventListener("submit", function (event) {
+      event.preventDefault();
 
-    const subscriberEmail = document.getElementById("subscriberEmail");
+      const subscriberEmail = document.getElementById("subscriberEmail");
 
-    if (!subscriberEmail.checkValidity()) {
-      subscriberEmail.reportValidity();
-      return;
-    }
+      if (!subscriberEmail.checkValidity()) {
+        subscriberEmail.reportValidity();
+        return;
+      }
 
-    alert("Thank you for subscribing.");
-    subscribeForm.reset();
-  });
-}
+      alert("Thank you for subscribing.");
+      subscribeForm.reset();
+    });
+  }
 
-
-  //gallery page cart section
-
+  /* =========================
+     GALLERY PAGE CART SECTION
+  ========================= */
   const addToCartButtons = document.querySelectorAll(".addToCartBtn");
   const viewCartBtn = document.getElementById("viewCartBtn");
   const clearCartBtn = document.getElementById("clearCartBtn");
@@ -30,17 +32,14 @@ if (subscribeForm) {
   const cartModal = document.getElementById("cartModal");
   const cartItems = document.getElementById("cartItems");
 
-  // Gets cart info from sessionStorage
   function getCart() {
     return JSON.parse(sessionStorage.getItem("cart")) || [];
   }
 
-  // Saves cart to sessionStorage
   function saveCart(cart) {
     sessionStorage.setItem("cart", JSON.stringify(cart));
   }
 
-  // Adds items to cart
   function addToCart(itemName) {
     let cart = getCart();
     cart.push(itemName);
@@ -48,7 +47,6 @@ if (subscribeForm) {
     alert(itemName + " added to cart!");
   }
 
-  // Display cart items in modal view
   function displayCart() {
     if (!cartItems) return;
 
@@ -66,7 +64,6 @@ if (subscribeForm) {
     }
   }
 
-  // Add to Cart button clicks
   if (addToCartButtons.length > 0) {
     addToCartButtons.forEach(function (button) {
       button.addEventListener("click", function () {
@@ -77,15 +74,15 @@ if (subscribeForm) {
     });
   }
 
-  // View Cart
   if (viewCartBtn) {
     viewCartBtn.addEventListener("click", function () {
       displayCart();
-      if (cartModal) cartModal.style.display = "block";
+      if (cartModal) {
+        cartModal.style.display = "block";
+      }
     });
   }
 
-  // Clear Cart
   if (clearCartBtn) {
     clearCartBtn.addEventListener("click", function () {
       sessionStorage.removeItem("cart");
@@ -94,7 +91,6 @@ if (subscribeForm) {
     });
   }
 
-  // Process Order
   if (processOrderBtn) {
     processOrderBtn.addEventListener("click", function () {
       sessionStorage.removeItem("cart");
@@ -103,14 +99,14 @@ if (subscribeForm) {
     });
   }
 
-  // Close Cart Modal view
   if (closeCartBtn) {
     closeCartBtn.addEventListener("click", function () {
-      cartModal.style.display = "none";
+      if (cartModal) {
+        cartModal.style.display = "none";
+      }
     });
   }
 
-  // Close modal view if clicking outside
   if (cartModal) {
     window.addEventListener("click", function (event) {
       if (event.target === cartModal) {
@@ -119,52 +115,27 @@ if (subscribeForm) {
     });
   }
 
+  /* =========================
+     ABOUT US PAGE FORM SECTION
+  ========================= */
+  const contactForm = document.getElementById("contactForm");
+  const clearFormBtn = document.getElementById("clearFormBtn");
 
-  //about us page form section
-
-const contactForm = document.getElementById("contactForm");
-const clearFormBtn = document.getElementById("clearFormBtn");
-
-  // Submits form on about us page
   if (contactForm) {
-  contactForm.addEventListener("submit", function (event) {
-    event.preventDefault();
+    contactForm.addEventListener("submit", function (event) {
+      event.preventDefault();
 
-    if (!contactForm.checkValidity()) {
-      contactForm.reportValidity();
-      return;
-    }
+      if (!contactForm.checkValidity()) {
+        contactForm.reportValidity();
+        return;
+      }
 
-    const name = document.getElementById("name").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const phone = document.getElementById("phone").value.trim();
-    const feedback = document.getElementById("feedback").value.trim();
-    const customOrder = document.getElementById("customOrder").checked;
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const phone = document.getElementById("phone").value.trim();
+      const feedback = document.getElementById("feedback").value.trim();
+      const customOrder = document.getElementById("customOrder").checked;
 
-    const contactData = {
-      name: name,
-      email: email,
-      phone: phone,
-      feedback: feedback,
-      customOrder: customOrder
-    };
-
-    localStorage.setItem("contactFormData", JSON.stringify(contactData));
-    alert("Thank you for your message, " + name + "!");
-  });
-}
-
-if (clearFormBtn) {
-  clearFormBtn.addEventListener("click", function () {
-    if (contactForm) {
-      contactForm.reset();
-    }
-    localStorage.removeItem("contactFormData");
-    alert("Form cleared.");
-  });
-}
-
-      // Saves info to localStorage
       const contactData = {
         name: name,
         email: email,
@@ -174,12 +145,10 @@ if (clearFormBtn) {
       };
 
       localStorage.setItem("contactFormData", JSON.stringify(contactData));
-
       alert("Thank you for your message, " + name + "!");
     });
   }
 
-  // Clear form
   if (clearFormBtn) {
     clearFormBtn.addEventListener("click", function () {
       if (contactForm) {
@@ -190,7 +159,6 @@ if (clearFormBtn) {
     });
   }
 
-  // Loads saved data
   if (contactForm) {
     const savedData = JSON.parse(localStorage.getItem("contactFormData"));
 
