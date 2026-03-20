@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
-
-  /* SUBSCRIBE FORM */
+  /* =========================
+     SUBSCRIBE FORM
+  ========================= */
   const subscribeForm = document.getElementById("subscribeForm");
 
   if (subscribeForm) {
@@ -14,12 +15,14 @@ document.addEventListener("DOMContentLoaded", function () {
         return;
       }
 
-      alert("Thank you for subscribing.");
+      window.alert("Thank you for subscribing.");
       subscribeForm.reset();
     });
   }
 
-  /* GALLERY CART */
+  /* =========================
+     GALLERY PAGE CART
+  ========================= */
   const addToCartButtons = document.querySelectorAll(".addToCartBtn");
   const viewCartBtn = document.getElementById("viewCartBtn");
   const clearCartBtn = document.getElementById("clearCartBtn");
@@ -37,16 +40,16 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function addToCart(itemName) {
-    let cart = getCart();
+    const cart = getCart();
     cart.push(itemName);
     saveCart(cart);
-    alert(itemName + " added to cart!");
+    window.alert(itemName + " added to cart!");
   }
 
   function displayCart() {
     if (!cartItems) return;
 
-    let cart = getCart();
+    const cart = getCart();
     cartItems.innerHTML = "";
 
     if (cart.length === 0) {
@@ -64,7 +67,12 @@ document.addEventListener("DOMContentLoaded", function () {
     addToCartButtons.forEach(function (button) {
       button.addEventListener("click", function () {
         const productCard = button.closest(".product-card");
-        const itemName = productCard.querySelector(".product-title").textContent;
+        if (!productCard) return;
+
+        const titleElement = productCard.querySelector(".product-title");
+        if (!titleElement) return;
+
+        const itemName = titleElement.textContent.trim();
         addToCart(itemName);
       });
     });
@@ -83,7 +91,7 @@ document.addEventListener("DOMContentLoaded", function () {
     clearCartBtn.addEventListener("click", function () {
       sessionStorage.removeItem("cart");
       displayCart();
-      alert("Cart cleared.");
+      window.alert("Cart cleared.");
     });
   }
 
@@ -91,7 +99,7 @@ document.addEventListener("DOMContentLoaded", function () {
     processOrderBtn.addEventListener("click", function () {
       sessionStorage.removeItem("cart");
       displayCart();
-      alert("Thank you for your order.");
+      window.alert("Thank you for your order.");
     });
   }
 
@@ -111,7 +119,9 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  /* ABOUT FORM */
+  /* =========================
+     ABOUT PAGE FORM
+  ========================= */
   const contactForm = document.getElementById("contactForm");
   const clearFormBtn = document.getElementById("clearFormBtn");
 
@@ -124,11 +134,17 @@ document.addEventListener("DOMContentLoaded", function () {
         return;
       }
 
-      const name = document.getElementById("name").value.trim();
-      const email = document.getElementById("email").value.trim();
-      const phone = document.getElementById("phone").value.trim();
-      const feedback = document.getElementById("feedback").value.trim();
-      const customOrder = document.getElementById("customOrder").checked;
+      const nameField = document.getElementById("name");
+      const emailField = document.getElementById("email");
+      const phoneField = document.getElementById("phone");
+      const feedbackField = document.getElementById("feedback");
+      const customOrderField = document.getElementById("customOrder");
+
+      const name = nameField ? nameField.value.trim() : "";
+      const email = emailField ? emailField.value.trim() : "";
+      const phone = phoneField ? phoneField.value.trim() : "";
+      const feedback = feedbackField ? feedbackField.value.trim() : "";
+      const customOrder = customOrderField ? customOrderField.checked : false;
 
       const contactData = {
         name: name,
@@ -139,7 +155,7 @@ document.addEventListener("DOMContentLoaded", function () {
       };
 
       localStorage.setItem("contactFormData", JSON.stringify(contactData));
-      alert("Thank you for your message, " + name + "!");
+      window.alert("Thank you for your message, " + name + "!");
     });
   }
 
@@ -149,7 +165,7 @@ document.addEventListener("DOMContentLoaded", function () {
         contactForm.reset();
       }
       localStorage.removeItem("contactFormData");
-      alert("Form cleared.");
+      window.alert("Form cleared.");
     });
   }
 
@@ -157,12 +173,17 @@ document.addEventListener("DOMContentLoaded", function () {
     const savedData = JSON.parse(localStorage.getItem("contactFormData"));
 
     if (savedData) {
-      document.getElementById("name").value = savedData.name || "";
-      document.getElementById("email").value = savedData.email || "";
-      document.getElementById("phone").value = savedData.phone || "";
-      document.getElementById("feedback").value = savedData.feedback || "";
-      document.getElementById("customOrder").checked = savedData.customOrder || false;
+      const nameField = document.getElementById("name");
+      const emailField = document.getElementById("email");
+      const phoneField = document.getElementById("phone");
+      const feedbackField = document.getElementById("feedback");
+      const customOrderField = document.getElementById("customOrder");
+
+      if (nameField) nameField.value = savedData.name || "";
+      if (emailField) emailField.value = savedData.email || "";
+      if (phoneField) phoneField.value = savedData.phone || "";
+      if (feedbackField) feedbackField.value = savedData.feedback || "";
+      if (customOrderField) customOrderField.checked = savedData.customOrder || false;
     }
   }
-
 });
