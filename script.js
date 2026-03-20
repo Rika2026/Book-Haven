@@ -122,25 +122,59 @@ if (subscribeForm) {
 
   //about us page form section
 
-  const contactForm = document.getElementById("contactForm");
-  const submitBtn = document.getElementById("submitBtn");
-  const clearFormBtn = document.getElementById("clearFormBtn");
+const contactForm = document.getElementById("contactForm");
+const clearFormBtn = document.getElementById("clearFormBtn");
 
-  // Submit form on about us page
-  if (submitBtn) {
-    submitBtn.addEventListener("click", function () {
+  // Submits form on about us page
+  if (contactForm) {
+  contactForm.addEventListener("submit", function (event) {
+    event.preventDefault();
 
-      const name = document.getElementById("name").value.trim();
-      const email = document.getElementById("email").value.trim();
-      const phone = document.getElementById("phone").value.trim();
-      const feedback = document.getElementById("feedback").value.trim();
-      const customOrder = document.getElementById("customOrder").checked;
+    if (!contactForm.checkValidity()) {
+      contactForm.reportValidity();
+      return;
+    }
 
-      // Validation to make sure info is entered
-      if (name === "" || email === "" || phone === "" || feedback === "") {
-        alert("Please fill out all fields.");
-        return;
-      }
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const feedback = document.getElementById("feedback").value.trim();
+    const customOrder = document.getElementById("customOrder").checked;
+
+    const contactData = {
+      name: name,
+      email: email,
+      phone: phone,
+      feedback: feedback,
+      customOrder: customOrder
+    };
+
+    localStorage.setItem("contactFormData", JSON.stringify(contactData));
+    alert("Thank you for your message, " + name + "!");
+  });
+}
+
+if (clearFormBtn) {
+  clearFormBtn.addEventListener("click", function () {
+    if (contactForm) {
+      contactForm.reset();
+    }
+    localStorage.removeItem("contactFormData");
+    alert("Form cleared.");
+  });
+}
+
+if (contactForm) {
+  const savedData = JSON.parse(localStorage.getItem("contactFormData"));
+
+  if (savedData) {
+    document.getElementById("name").value = savedData.name || "";
+    document.getElementById("email").value = savedData.email || "";
+    document.getElementById("phone").value = savedData.phone || "";
+    document.getElementById("feedback").value = savedData.feedback || "";
+    document.getElementById("customOrder").checked = savedData.customOrder || false;
+  }
+}
 
       // Saves info to localStorage
       const contactData = {
