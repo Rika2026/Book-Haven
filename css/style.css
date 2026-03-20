@@ -173,6 +173,40 @@ button:hover {
   font-weight: bold;
   color: #ffffff;
 }
+.newsletter-section {
+  margin-bottom: 16px;
+}
+
+.newsletter-section h3 {
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.subscribe-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.subscribe-form input[type="email"] {
+  width: 260px;
+  max-width: 100%;
+  padding: 10px;
+  border: 1px solid #131C26;
+  background-color: #ffffff;
+  box-sizing: border-box;
+}
+
+.subscribe-form button {
+  background-color: #3E5641;
+  color: #ffffff;
+}
+
+.subscribe-form button:hover {
+  background-color: #742C36;
+}
 
 /* ---------------- HOME PAGE ---------------- */
 
