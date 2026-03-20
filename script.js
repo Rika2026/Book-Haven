@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
-  /* =========================
-     SUBSCRIBE FORM
-  ========================= */
+  //SUBSCRIBE FORM IN THE FOOTER
+  
   const subscribeForm = document.getElementById("subscribeForm");
 
   if (subscribeForm) {
@@ -20,9 +19,8 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  /* =========================
-     GALLERY PAGE CART
-  ========================= */
+  // GALLERY PAGE FOR THE CART
+  
   const addToCartButtons = document.querySelectorAll(".addToCartBtn");
   const viewCartBtn = document.getElementById("viewCartBtn");
   const clearCartBtn = document.getElementById("clearCartBtn");
@@ -119,9 +117,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  /* =========================
-     ABOUT PAGE FORM
-  ========================= */
+  //ABOUT PAGE FORM
   const contactForm = document.getElementById("contactForm");
   const clearFormBtn = document.getElementById("clearFormBtn");
 
