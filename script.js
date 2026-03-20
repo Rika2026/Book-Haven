@@ -1,12 +1,23 @@
 document.addEventListener("DOMContentLoaded", function () {
 
   //subscribe button section
-  const subscribeBtn = document.getElementById("subscribeBtn");
-  if (subscribeBtn) {
-    subscribeBtn.addEventListener("click", function () {
-      alert("Thank you for subscribing.");
-    });
-  }
+  const subscribeForm = document.getElementById("subscribeForm");
+
+if (subscribeForm) {
+  subscribeForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    const subscriberEmail = document.getElementById("subscriberEmail");
+
+    if (!subscriberEmail.checkValidity()) {
+      subscriberEmail.reportValidity();
+      return;
+    }
+
+    alert("Thank you for subscribing.");
+    subscribeForm.reset();
+  });
+}
 
 
   //gallery page cart section
