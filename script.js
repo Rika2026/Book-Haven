@@ -164,18 +164,6 @@ if (clearFormBtn) {
   });
 }
 
-if (contactForm) {
-  const savedData = JSON.parse(localStorage.getItem("contactFormData"));
-
-  if (savedData) {
-    document.getElementById("name").value = savedData.name || "";
-    document.getElementById("email").value = savedData.email || "";
-    document.getElementById("phone").value = savedData.phone || "";
-    document.getElementById("feedback").value = savedData.feedback || "";
-    document.getElementById("customOrder").checked = savedData.customOrder || false;
-  }
-}
-
       // Saves info to localStorage
       const contactData = {
         name: name,
